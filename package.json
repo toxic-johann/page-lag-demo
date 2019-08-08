@@ -1,0 +1,32 @@
+{
+  "name": "page-stuck-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "kill-port 3000 && node ./index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/toxic-johann/page-stuck-demo.git"
+  },
+  "author": "toxic-johann",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/toxic-johann/page-stuck-demo/issues"
+  },
+  "homepage": "https://github.com/toxic-johann/page-stuck-demo#readme",
+  "dependencies": {
+    "connect": "^3.7.0",
+    "kill-port": "^1.5.1",
+    "livereload": "^0.8.0",
+    "serve-static": "^1.14.1"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.2",
+    "eslint": "^6.1.0",
+    "eslint-config-egg": "^7.4.1",
+    "eslint-plugin-eggache": "^1.0.0"
+  }
+}

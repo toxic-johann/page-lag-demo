@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+  <div>stuck duration: <input id="duration" type="number" />s.</div>
+  <button id="button">add div</button>
+  <div id='bottom'></div>
+</body>
+<script>
+  let index = 0;
+  let time = 0;
+  const button = document.getElementById('button');
+  const duration = document.getElementById('duration');
+  duration.addEventListener('change', (event) => {
+    time = event.target.value;
+  });
+  button.addEventListener('click', () => {
+    const div = document.createElement('div');
+    div.innerText = ++index;
+    document.body.insertBefore(div, document.body.children[2]);
+    const start = Date.now();
+    const end = start + (time * 1000);
+    while(true) {
+      if (end < Date.now()) {
+        break;
+      }
+    }
+  });
+</script>
+</html>
