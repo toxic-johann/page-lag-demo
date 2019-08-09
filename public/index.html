@@ -5,11 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Document</title>
+  <link href="https://unpkg.com/papercss/dist/paper.min.css" rel="stylesheet">
 </head>
 <body>
-  <div>stuck duration: <input id="duration" type="number" />s.</div>
-  <button id="button">add div</button>
-  <div id='bottom'></div>
+  <div class="row flex-center">
+    <div class="col paper sm-12 md-8">
+      <article class="article ">
+        <h1>Stuck Simulator</h1>
+        <h3>A demo to simulate stuck</h3>
+        <div>stuck duration: <input id="duration" type="number" />s.</div>
+        <button id="button">add div</button>
+        <div id='bottom'></div>
+      </article>
+    </div>
+  </div>
 </body>
 <script>
   let index = 0;
