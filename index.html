@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Lag Simulator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/papercss@1.6.1/dist/paper.min.css">
+  <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+  <div class="row flex-center">
+    <div class="col paper sm-12 md-8">
+      <article class="article ">
+        <h1>Lag Simulator</h1>
+        <h3>A demo to simulate lag</h3>
+        <section class="row">
+          You can use the range bar below to induce lag.
+        </section>
+        <div class="row">
+          The lag time is <input id="lag" type="number" min="0" max="1000" value="0">
+           ms.
+        </div>
+        <section class="row">
+            The little lag radar blow will demonstrating performance - or lack of.
+        </section>
+        <section class="row">
+            <div id="lagRadarContainer" class="border border-5 border-primary"></div>
+        </section>
+        <section class="row">
+          You can simulate user interactive through the button below.
+        </section>
+        <section class="row">
+            <button id="counter">click me!</button>
+        </section>
+        <section class="row">
+          <div>You have clicked <span id="times">0</span> times.</div>
+        </section>
+      </article>
+    </div>
+  </div>
+</body>
+<script type="module">
+  import './index.js';
+</script>
+</html>
