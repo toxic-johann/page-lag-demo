@@ -1,5 +1,5 @@
 {
-  "name": "page-stuck-demo",
+  "name": "page-lag-demo",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/toxic-johann/page-stuck-demo.git"
+    "url": "git+https://github.com/toxic-johann/page-lag-demo.git"
   },
   "author": "toxic-johann",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/toxic-johann/page-stuck-demo/issues"
+    "url": "https://github.com/toxic-johann/page-lag-demo/issues"
   },
-  "homepage": "https://github.com/toxic-johann/page-stuck-demo#readme",
+  "homepage": "https://github.com/toxic-johann/page-lag-demo#readme",
   "dependencies": {
     "connect": "^3.7.0",
     "kill-port": "^1.5.1",
@@ -28,6 +28,6 @@
     "eslint": "^6.1.0",
     "eslint-config-egg": "^7.4.1",
     "eslint-plugin-eggache": "^1.0.0",
-    "gh-pages": "^2.1.0"
+    "gh-pages": "^2.1.1"
   }
 }

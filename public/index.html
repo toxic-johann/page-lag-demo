@@ -4,41 +4,43 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-  <link href="https://unpkg.com/papercss/dist/paper.min.css" rel="stylesheet">
+  <title>Lag Simulator</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/papercss@1.6.1/dist/paper.min.css">
+  <link rel="stylesheet" href="./index.css">
 </head>
 <body>
   <div class="row flex-center">
     <div class="col paper sm-12 md-8">
       <article class="article ">
-        <h1>Stuck Simulator</h1>
-        <h3>A demo to simulate stuck</h3>
-        <div>stuck duration: <input id="duration" type="number" />s.</div>
-        <button id="button">add div</button>
-        <div id='bottom'></div>
+        <h1>Lag Simulator</h1>
+        <h3>A demo to simulate lag</h3>
+        <section class="row">
+          You can use the range bar below to induce lag.
+        </section>
+        <div class="row">
+          The lag time is <input id="lag" type="number" min="0" max="1000" value="0">
+           ms.
+        </div>
+        <section class="row">
+            The little lag radar blow will demonstrating performance - or lack of.
+        </section>
+        <section class="row">
+            <div id="lagRadarContainer" class="border border-5 border-primary"></div>
+        </section>
+        <section class="row">
+          You can simulate user interactive through the button below.
+        </section>
+        <section class="row">
+            <button id="counter">click me!</button>
+        </section>
+        <section class="row">
+          <div>You have clicked <span id="times">0</span> times.</div>
+        </section>
       </article>
     </div>
   </div>
 </body>
-<script>
-  let index = 0;
-  let time = 0;
-  const button = document.getElementById('button');
-  const duration = document.getElementById('duration');
-  duration.addEventListener('change', (event) => {
-    time = event.target.value;
-  });
-  button.addEventListener('click', () => {
-    const div = document.createElement('div');
-    div.innerText = ++index;
-    document.body.insertBefore(div, document.body.children[2]);
-    const start = Date.now();
-    const end = start + (time * 1000);
-    while(true) {
-      if (end < Date.now()) {
-        break;
-      }
-    }
-  });
+<script type="module">
+  import './index.js';
 </script>
 </html>

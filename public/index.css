@@ -1,0 +1,13 @@
+#lagger {
+  padding: 20px 10px;
+}
+
+#lag {
+  transform: translateY(-25%);
+}
+
+#val {
+  display: inline-block;
+  text-align: right;
+  width: 3em;
+}
